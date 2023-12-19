@@ -8,9 +8,7 @@ cap = cv2.VideoCapture(0)
 
 #カスケード分類器読み込み
 haarascades_path = os.getcwd() + "/haarcascades/"
-#face_cascade = cv2.CascadeClassifier(haarascades_path+"haarcascade_frontalface_default.xml")
 face_cascade = cv2.CascadeClassifier(haarascades_path+"haarcascade_frontalface_alt.xml")
-#eye_cascade = cv2.CascadeClassifier(haarascades_path+'haarcascade_eye.xml')
 eye_cascade = cv2.CascadeClassifier(haarascades_path+'haarcascade_eye_tree_eyeglasses.xml')
 
 
@@ -19,7 +17,7 @@ if not cap.isOpened():
     exit()
 
 #動画生成
-filePath = './test.mp4'
+filePath = './copy.mp4'
 W = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 H = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS)) # フレームレート
